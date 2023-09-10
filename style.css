@@ -1,0 +1,69 @@
+body {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.card {
+    margin: 0 auto;
+    display: flex;
+    width: 120px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    
+    transform: rotate3d(0, 1, 0, 0deg);
+    transition-duration: 2s;
+}
+
+.card-front {
+    width: 100%;
+    background-color: red;
+    display: none;
+}
+
+.card-end {
+    background-image: url("./images/card_images/cat001.jpg");
+    background-position: 780px -100px;
+    width: 100%;
+    
+    
+    
+}
+
+.card:active {
+    transform: rotate3d(0, 1, 0, 360deg);
+    transition-duration: 0ms;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+.card:hover .card-end {
+    box-shadow: rgba(0, 0, 0, 0.05) 1px 1px 40px 0px inset;
+}
+
+
+
+input[type=radio] {
+    display: none;
+}
+
+label {
+    display: block;
+}
+
+.kanji {
+    cursor: pointer;
+}
+
+.kanji .descript {
+    display: none;
+}
+
+.kanji input:checked~ .descript {
+    display: block;
+}
+
+.kanji:hover .descript {
+    display: block;
+}
